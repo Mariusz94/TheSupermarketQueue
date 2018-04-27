@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+/*import java.lang.reflect.Array;
 import java.util.Arrays;
 public class Solution {
 
@@ -23,6 +23,20 @@ public class Solution {
         Arrays.sort(tills);
 
         return tills[tills.length-1];
+    }
+
+}*/
+
+import java.util.Arrays;
+public class Solution {
+
+    public static int solveSuperMarketQueue(int[] customers, int n) {
+        int[] result = new int[n];
+        for(int i = 0; i < customers.length; i++){
+            result[0] += customers[i];
+            Arrays.sort(result);
+        }
+        return result[n-1];
     }
 
 }
